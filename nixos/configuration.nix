@@ -6,7 +6,8 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
 
@@ -24,7 +25,7 @@
   boot.initrd.luks.devices."luks-4d85b4ee-6bc9-4657-a166-b243169a0834".keyFile = "/crypto_keyfile.bin";
 
   networking.hostName = "XPS-17-nixos"; # Define your hostname.
-  networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  networking.wireless.enable = true; # Enables wireless support via wpa_supplicant.
 
   networking.networkmanager.enable = true;
 
